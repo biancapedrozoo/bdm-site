@@ -180,6 +180,12 @@
     }
     .btn-outline:hover { background: var(--pink); color: #fff; }
     .hero-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-carousel { position: absolute; inset: 0; }
+    .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease; }
+    .hero-slide.active { opacity: 1; }
+    .hero-dots { position: absolute; bottom: 14px; left: 0; right: 0; z-index: 3; display: flex; justify-content: center; gap: 7px; }
+    .hero-dots button { width: 8px; height: 8px; padding: 0; border: none; border-radius: 50%; background: rgba(255,255,255,0.65); cursor: pointer; transition: all 0.25s; }
+    .hero-dots button.active { background: #fff; width: 22px; border-radius: 5px; }
     .hero-art {
       position: relative;
       aspect-ratio: 4/5;
@@ -693,7 +699,16 @@
         </div>
       </div>
       <div class="hero-art fade-up delay-2">
-        <img src="img/hero-dog.jpg" alt="BDM Creative" class="hero-photo" />
+        <div class="hero-carousel" id="heroCar">
+          <img src="img/hero-1.jpg" class="hero-slide active" alt="BDM Creative" />
+          <img src="img/hero-2.jpg" class="hero-slide" alt="BDM Creative" />
+          <img src="img/hero-3.jpg" class="hero-slide" alt="BDM Creative" />
+        </div>
+        <div class="hero-dots" id="heroDots">
+          <button class="active" onclick="heroGo(0)" aria-label="Imagem 1"></button>
+          <button onclick="heroGo(1)" aria-label="Imagem 2"></button>
+          <button onclick="heroGo(2)" aria-label="Imagem 3"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -1028,6 +1043,19 @@
       document.querySelectorAll(`#dots-${id} button`).forEach((b, n) => b.classList.toggle("active", n === idx));
     }
     function carMove(id, dir) { carGo(id, (carPos[id] || 0) + dir); }
+
+    // ─── Carrossel do HERO (eu + a cachorra) ───
+    let heroIdx = 0;
+    function heroGo(i) {
+      const slides = document.querySelectorAll('#heroCar .hero-slide');
+      const dots = document.querySelectorAll('#heroDots button');
+      if (!slides.length) return;
+      i = (i + slides.length) % slides.length;
+      slides.forEach((el, n) => el.classList.toggle('active', n === i));
+      dots.forEach((el, n) => el.classList.toggle('active', n === i));
+      heroIdx = i;
+    }
+    setInterval(() => heroGo(heroIdx + 1), 3800);
 
     function selecionar(prodId, qty) {
       const prod = PRODUTOS.find(p => p.id === prodId);
