@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BDM Creative | Papelaria Personalizada | V.N. Gaia</title>
-  <meta name="description" content="Papelaria personalizada para empresas: cartões, convites, etiquetas e brindes. Produção à medida da tua marca em Gaia e Porto." />
+  <title>BDM | Bianca Digital Marketing | V.N. Gaia</title>
+  <meta name="description" content="Não somos uma agência. Somos quem define quem cresce no digital em Gaia e no Porto. Estratégia, design, conteúdo e gestão completa." />
+  <meta name="google-site-verification" content="google8c309971021ce9f5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --cream: #F4EFE4;
       --cream-dark: #EDE6D6;
-      --orange: #F47C20;
-      --orange-light: #FF9A4D;
-      --orange-pale: #FDF0E6;
       --pink: #C4306A;
       --pink-light: #D94A7E;
+      --pink-pale: #F9EEF3;
       --dark: #1C1A18;
       --mid: #4A453F;
       --muted: #9A9088;
       --white: #FDFCF9;
-      --border: #E8DFD2;
+      --border: #E0D8CC;
     }
 
     html { scroll-behavior: smooth; }
@@ -36,14 +35,12 @@
       overflow-x: hidden;
     }
 
-    .display { font-family: 'Fredoka', sans-serif; }
-
     /* ─── NAV ─── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 18px 5%;
+      padding: 20px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -54,65 +51,69 @@
       backdrop-filter: blur(12px);
       box-shadow: 0 1px 20px rgba(0,0,0,0.06);
     }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo img { height: 42px; }
-    .nav-logo .wordmark {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 700;
-      font-size: 22px;
-      color: var(--dark);
-      letter-spacing: -0.01em;
-    }
-    .nav-logo .wordmark b { color: var(--orange); }
-    .nav-logo .wordmark i { color: var(--pink); font-style: normal; }
-    .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
       font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--dark);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--orange); }
+    .nav-links a:hover { color: var(--pink); }
     .nav-cta {
-      background: var(--orange);
+      background: var(--pink);
       color: #fff !important;
-      padding: 10px 22px !important;
-      border-radius: 40px;
-      letter-spacing: 0.04em !important;
+      padding: 10px 24px !important;
+      border-radius: 2px;
+      letter-spacing: 0.06em !important;
     }
-    .nav-cta:hover { background: var(--orange-light); color: #fff !important; }
-    .nav-back { color: var(--pink) !important; }
+    .nav-cta:hover { background: var(--pink-light); color: #fff !important; }
+    .nav-creative {
+      color: #F47C20 !important;
+      border: 1.5px solid #F47C20;
+      padding: 8px 18px !important;
+      border-radius: 40px;
+      transition: all 0.2s;
+    }
+    .nav-creative:hover { background: #F47C20; color: #fff !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.3s; }
+    .hamburger span { width: 24px; height: 1.5px; background: var(--dark); transition: all 0.3s; }
 
     /* ─── HERO ─── */
     #hero {
-      min-height: 92vh;
-      background: linear-gradient(135deg, var(--cream) 0%, var(--orange-pale) 100%);
+      min-height: 100vh;
+      background: var(--cream);
       display: flex;
       align-items: center;
-      padding: 130px 5% 70px;
+      padding: 120px 5% 80px;
       position: relative;
       overflow: hidden;
     }
-    .hero-blob {
+    #hero::before {
+      content: '';
       position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
       border-radius: 50%;
-      filter: blur(10px);
-      opacity: 0.5;
-      z-index: 0;
+      background: radial-gradient(circle, rgba(196,48,106,0.08) 0%, transparent 70%);
     }
-    .hero-blob.b1 { top: -120px; right: -80px; width: 420px; height: 420px; background: radial-gradient(circle, rgba(244,124,32,0.25), transparent 70%); }
-    .hero-blob.b2 { bottom: -150px; left: -60px; width: 380px; height: 380px; background: radial-gradient(circle, rgba(196,48,106,0.18), transparent 70%); }
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: 10%;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,48,106,0.05) 0%, transparent 70%);
+    }
     .hero-inner {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 70px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       align-items: center;
       width: 100%;
       position: relative;
@@ -123,535 +124,708 @@
       align-items: center;
       gap: 8px;
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--pink);
-      background: rgba(196,48,106,0.08);
-      padding: 7px 16px;
-      border-radius: 40px;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 24px; height: 1px;
+      background: var(--pink);
     }
     .hero-title {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 700;
-      font-size: clamp(40px, 5.4vw, 76px);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 5vw, 72px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 28px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--pink);
+    }
+    .hero-sub {
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 48px;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--pink);
+      color: #fff;
+      padding: 16px 36px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--pink-light); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1.5px solid var(--dark);
+      color: var(--dark);
+      padding: 16px 36px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--pink); color: var(--pink); }
+    .hero-image {
+      position: relative;
+    }
+    .hero-image-wrap {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.02);
+    }
+    .hero-image-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -30px;
+      background: var(--white);
+      padding: 20px 24px;
+      border-radius: 4px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+    .hero-image-badge strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--pink);
+      line-height: 1;
+    }
+    .hero-image-badge span {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero-dot {
+      position: absolute;
+      top: -16px; right: -16px;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--pink);
+      z-index: 2;
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats-bar {
+      background: var(--dark);
+      padding: 40px 5%;
+    }
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    .stat {
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--pink);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+    }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 100px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-tag::before {
+      content: '';
+      width: 20px; height: 1px;
+      background: var(--pink);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 400;
+      line-height: 1.15;
       color: var(--dark);
       margin-bottom: 24px;
     }
-    .hero-title em { font-style: normal; color: var(--orange); }
-    .hero-title span { color: var(--pink); }
-    .hero-sub {
-      font-size: 17px;
+    .section-title em { font-style: italic; color: var(--pink); }
+    .section-sub {
+      font-size: 15px;
       color: var(--mid);
-      line-height: 1.75;
-      max-width: 480px;
-      margin-bottom: 38px;
+      line-height: 1.8;
+      max-width: 560px;
     }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--orange);
-      color: #fff;
-      padding: 16px 34px;
+
+    /* ─── PROBLEMA ─── */
+    #problema { background: var(--white); }
+    .problema-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 70px;
+    }
+    .problema-cards { display: flex; flex-direction: column; gap: 16px; }
+    .problema-card {
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .problema-card:hover {
+      border-color: var(--pink);
+      box-shadow: 0 4px 20px rgba(196,48,106,0.08);
+    }
+    .problema-card-icon {
+      width: 36px; height: 36px;
+      background: var(--pink-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+    .problema-card-text strong {
+      display: block;
       font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      border-radius: 40px;
-      transition: all 0.2s;
-      display: inline-block;
-      box-shadow: 0 8px 24px rgba(244,124,32,0.28);
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 4px;
     }
-    .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(244,124,32,0.36); }
-    .btn-outline {
-      border: 2px solid var(--pink);
-      color: var(--pink);
-      padding: 14px 32px;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      border-radius: 40px;
-      transition: all 0.2s;
-      display: inline-block;
-      background: transparent;
+    .problema-card-text p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
     }
-    .btn-outline:hover { background: var(--pink); color: #fff; }
-    .hero-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hero-art {
-      position: relative;
-      aspect-ratio: 4/5;
-      border-radius: 24px;
-      background:
-        repeating-linear-gradient(45deg, var(--orange) 0 38px, var(--pink) 38px 76px);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.14);
-      overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .hero-art-card {
+    .problema-quote {
       background: var(--cream);
-      width: 74%;
-      aspect-ratio: 3/4;
-      border-radius: 14px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-      transform: rotate(-4deg);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      padding: 26px;
+      border-radius: 4px;
+      padding: 48px;
+      position: relative;
     }
-    .hero-art-card .heart { font-size: 38px; }
-    .hero-art-card .name {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 700;
-      font-size: 30px;
+    .problema-quote::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 120px;
       color: var(--pink);
-      margin-top: 8px;
+      opacity: 0.15;
+      position: absolute;
+      top: -20px; left: 32px;
       line-height: 1;
     }
-    .hero-art-card .role {
-      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--orange); font-weight: 700; margin-top: 10px;
-    }
-    .hero-art-card .line { width: 46px; height: 3px; background: var(--orange); border-radius: 3px; margin: 16px 0 6px; }
-    .hero-art-card .small { font-size: 11px; color: var(--muted); }
-
-    /* ─── MARQUEE ─── */
-    .marquee {
-      background: var(--pink);
-      padding: 16px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .marquee-track {
-      display: inline-block;
-      animation: scroll 22s linear infinite;
-    }
-    .marquee-track span {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 600;
-      font-size: 16px;
-      color: #fff;
-      margin: 0 28px;
-      letter-spacing: 0.04em;
-    }
-    .marquee-track span::after { content: '♥'; color: var(--orange-light); margin-left: 28px; }
-    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ─── SECTIONS ─── */
-    section { padding: 90px 5%; }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-head { text-align: center; margin-bottom: 56px; }
-    .section-tag {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 14px;
-    }
-    .section-title {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 700;
-      font-size: clamp(32px, 4vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -0.01em;
+    .problema-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.5;
       color: var(--dark);
+      margin-bottom: 24px;
     }
-    .section-title em { font-style: normal; color: var(--pink); }
-    .section-sub {
-      font-size: 16px; color: var(--mid); line-height: 1.7;
-      max-width: 560px; margin: 16px auto 0;
+    .problema-quote cite {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--pink);
+      font-style: normal;
     }
 
-    /* ─── LOJA ─── */
-    #loja { background: var(--cream); }
-    .cat-head {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 600; font-size: 26px; color: var(--pink);
-      margin: 48px 0 22px; display: flex; align-items: center; gap: 14px;
-    }
-    .cat-head:first-child { margin-top: 0; }
-    .cat-head::after { content: ''; flex: 1; height: 2px; background: var(--border); border-radius: 2px; }
-    .produtos-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-    }
-    .quote-total { font-size: 17px !important; line-height: 1.05; text-align: right; color: var(--pink) !important; }
-    .produto-card {
-      position: relative;
-      background: var(--white);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--border);
-    }
-    /* ── Carrossel de fotos ── */
-    .carousel { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--orange-pale); }
-    .car-track { display: flex; height: 100%; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
-    .slide { position: relative; flex: 0 0 100%; height: 100%; }
-    .slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; }
-    .slide .ph {
-      position: absolute; inset: 0; z-index: 1;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-      background: repeating-linear-gradient(135deg, var(--orange-pale) 0 18px, #fff 18px 36px);
-      color: var(--pink); text-align: center; padding: 16px;
-    }
-    .slide .ph .ph-emoji { font-size: 40px; }
-    .slide .ph .ph-name { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 15px; color: var(--mid); }
-    .slide .ph .ph-tip { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-    .car-arrow {
-      position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
-      width: 34px; height: 34px; border-radius: 50%; border: none; cursor: pointer;
-      background: rgba(255,255,255,0.9); color: var(--dark); font-size: 20px; line-height: 1;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15); transition: background 0.2s;
-    }
-    .car-arrow:hover { background: #fff; color: var(--orange); }
-    .car-arrow.prev { left: 10px; } .car-arrow.next { right: 10px; }
-    .car-dots { position: absolute; bottom: 10px; left: 0; right: 0; z-index: 4; display: flex; justify-content: center; gap: 6px; }
-    .car-dots button {
-      width: 7px; height: 7px; border-radius: 50%; border: none; padding: 0; cursor: pointer;
-      background: rgba(255,255,255,0.6); transition: all 0.2s;
-    }
-    .car-dots button.active { background: #fff; width: 18px; border-radius: 4px; }
-    .badge-overlay {
-      position: absolute; top: 12px; right: 12px; z-index: 4;
-      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #fff; background: var(--pink); padding: 6px 12px; border-radius: 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    .badge-overlay.quote { background: var(--orange); }
-    .produto-top {
-      padding: 30px 30px 0;
+    /* ─── SERVIÇOS ─── */
+    #servicos { background: var(--cream); }
+    .servicos-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 60px;
+      gap: 40px;
     }
-    .produto-emoji {
-      width: 62px; height: 62px;
-      border-radius: 16px;
-      background: var(--orange-pale);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 30px; flex-shrink: 0;
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
-    .produto-badge {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--pink); background: rgba(196,48,106,0.1);
-      padding: 5px 12px; border-radius: 40px;
+    .servico-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .produto-body { padding: 18px 30px 30px; display: flex; flex-direction: column; flex: 1; }
-    .produto-card h3 {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 600; font-size: 24px; color: var(--dark); margin-bottom: 8px;
+    .servico-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--pink);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
     }
-    .produto-card .produto-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 22px; }
-    .qty-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--mid); margin-bottom: 12px;
+    .servico-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+    .servico-card:hover::before { transform: scaleX(1); }
+    .servico-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 60px;
+      font-weight: 300;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 20px;
     }
-    .qty-options { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 22px; }
-    .qty-btn {
+    .servico-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .servico-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .servico-card p {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+    .servico-card.featured {
+      background: var(--dark);
+    }
+    .servico-card.featured .servico-num { color: rgba(255,255,255,0.1); }
+    .servico-card.featured h3 { color: var(--white); }
+    .servico-card.featured p { color: rgba(255,255,255,0.6); }
+
+    /* ─── PROCESSO ─── */
+    #processo { background: var(--white); }
+    .processo-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 60px;
+      position: relative;
+    }
+    .processo-steps::before {
+      content: '';
+      position: absolute;
+      top: 32px; left: 10%;
+      width: 80%;
+      height: 1px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .processo-step {
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-circle {
+      width: 64px; height: 64px;
+      border-radius: 50%;
       border: 1.5px solid var(--border);
       background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--pink);
+      transition: all 0.3s;
+    }
+    .processo-step:hover .step-circle {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: #fff;
+    }
+    .processo-step h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .processo-step p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ─── SETORES ─── */
+    #setores { background: var(--cream); }
+    .setores-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 60px;
+    }
+    .setor-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 32px 20px;
+      text-align: center;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      cursor: default;
+    }
+    .setor-card:hover {
+      border-color: var(--pink);
+      box-shadow: 0 8px 30px rgba(196,48,106,0.1);
+      transform: translateY(-4px);
+    }
+    .setor-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .setor-card span:last-child {
+      font-size: 13px;
+      font-weight: 500;
       color: var(--mid);
-      padding: 9px 16px;
-      border-radius: 40px;
-      font-size: 14px; font-weight: 600;
-      cursor: pointer;
-      transition: all 0.18s;
+    }
+
+    /* ─── SOBRE ─── */
+    #sobre { background: var(--dark); }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .sobre-image {
+      position: relative;
+    }
+    .sobre-image img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+    .sobre-image-frame {
+      position: absolute;
+      top: 24px; right: -24px;
+      width: 100%; height: 100%;
+      border: 1.5px solid rgba(196,48,106,0.4);
+      border-radius: 4px;
+      z-index: 0;
+    }
+    .sobre-image { position: relative; z-index: 1; }
+    #sobre .section-tag { color: var(--pink); }
+    #sobre .section-tag::before { background: var(--pink); }
+    #sobre .section-title { color: var(--white); }
+    .sobre-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .sobre-valores {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .valor-tag {
+      padding: 8px 16px;
+      border: 1px solid rgba(196,48,106,0.3);
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      transition: all 0.2s;
+    }
+    .valor-tag:hover {
+      border-color: var(--pink);
+      color: var(--pink);
+    }
+
+    /* ─── DEPOIMENTOS ─── */
+    #resultados { background: var(--white); }
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .depoimento-card {
+      background: var(--cream);
+      border-radius: 4px;
+      padding: 36px;
+      position: relative;
+    }
+    .stars {
+      color: var(--pink);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .depoimento-card blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--dark);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .depoimento-autor {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .autor-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--pink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .autor-info strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .autor-info span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ─── CTA ─── */
+    #contacto { background: var(--pink); }
+    .cta-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .cta-text .section-tag { color: rgba(255,255,255,0.6); }
+    .cta-text .section-tag::before { background: rgba(255,255,255,0.6); }
+    .cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .cta-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+    }
+    .cta-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 2px;
+      padding: 14px 16px;
       font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
     }
-    .qty-btn:hover { border-color: var(--orange); color: var(--orange); }
-    .qty-btn.active {
-      background: var(--orange); border-color: var(--orange); color: #fff;
-      box-shadow: 0 6px 16px rgba(244,124,32,0.3);
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: rgba(255,255,255,0.6); }
+    .form-group select option { background: var(--pink); color: #fff; }
+    .form-group textarea { resize: none; height: 100px; }
+    .btn-form {
+      background: #fff;
+      color: var(--pink);
+      padding: 16px 36px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+      align-self: flex-start;
     }
-    .price-box {
-      background: var(--orange-pale);
-      border-radius: 14px;
-      padding: 18px 22px;
+    .btn-form:hover { background: var(--dark); color: #fff; transform: translateY(-2px); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--dark);
+      padding: 60px 5% 40px;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 32px;
+    }
+    .footer-brand img { height: 36px; margin-bottom: 16px; opacity: 1; }
+    .footer-brand p { font-size: 13px; line-height: 1.8; max-width: 260px; }
+    .footer-col h5 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--pink); }
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 18px;
-      min-height: 72px;
+      font-size: 12px;
     }
-    .price-box .price-info .unit { font-size: 12px; color: var(--mid); }
-    .price-box .price-info .unit b { color: var(--pink); }
-    .price-box .total {
-      font-family: 'Fredoka', sans-serif;
-      font-weight: 700; font-size: 30px; color: var(--orange); line-height: 1;
-    }
-    .price-box .total small { font-size: 14px; }
-    .price-empty { font-size: 13px; color: var(--muted); }
-    .btn-add {
-      background: var(--pink);
-      color: #fff;
-      border: none;
-      padding: 14px;
-      border-radius: 40px;
-      font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin-top: auto;
-      font-family: 'Inter', sans-serif;
-    }
-    .btn-add:hover:not(:disabled) { background: var(--pink-light); transform: translateY(-2px); }
-    .btn-add:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
-
-    /* ─── CART (sticky) ─── */
-    .cart-fab {
-      position: fixed;
-      bottom: 28px; right: 28px;
-      z-index: 90;
-      background: var(--dark);
-      color: #fff;
-      border: none;
-      width: auto;
-      padding: 0 22px 0 18px;
-      height: 58px;
-      border-radius: 40px;
-      display: flex; align-items: center; gap: 10px;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      font-family: 'Inter', sans-serif;
-      font-size: 14px; font-weight: 600;
-      transition: transform 0.2s;
-    }
-    .cart-fab:hover { transform: translateY(-2px); }
-    .cart-fab .cart-icon { font-size: 20px; }
-    .cart-count {
-      background: var(--orange);
-      color: #fff;
-      font-size: 12px; font-weight: 700;
-      min-width: 22px; height: 22px;
+    .footer-social { display: flex; gap: 16px; }
+    .social-link {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      padding: 0 6px;
-    }
-    .cart-overlay {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.4);
-      z-index: 200;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .cart-overlay.open { opacity: 1; pointer-events: auto; }
-    .cart-panel {
-      position: fixed;
-      top: 0; right: 0; bottom: 0;
-      width: 420px; max-width: 90vw;
-      background: var(--white);
-      z-index: 201;
-      transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-      display: flex; flex-direction: column;
-      box-shadow: -10px 0 40px rgba(0,0,0,0.15);
-    }
-    .cart-panel.open { transform: translateX(0); }
-    .cart-header {
-      padding: 26px 28px;
-      border-bottom: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .cart-header h3 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 22px; }
-    .cart-close { background: none; border: none; font-size: 26px; cursor: pointer; color: var(--muted); line-height: 1; }
-    .cart-items { flex: 1; overflow-y: auto; padding: 20px 28px; }
-    .cart-empty { text-align: center; color: var(--muted); padding: 60px 20px; }
-    .cart-empty .big { font-size: 44px; margin-bottom: 12px; }
-    .cart-item {
-      display: flex; gap: 14px; align-items: flex-start;
-      padding: 16px 0; border-bottom: 1px solid var(--border);
-    }
-    .cart-item-emoji {
-      width: 46px; height: 46px; border-radius: 12px; flex-shrink: 0;
-      background: var(--orange-pale); display: flex; align-items: center; justify-content: center; font-size: 22px;
-    }
-    .cart-item-info { flex: 1; }
-    .cart-item-info strong { display: block; font-size: 15px; font-weight: 600; }
-    .cart-item-info span { font-size: 13px; color: var(--muted); }
-    .cart-item-right { text-align: right; }
-    .cart-item-right .ci-price { font-weight: 700; color: var(--orange); font-size: 16px; }
-    .cart-item-remove { background: none; border: none; color: var(--muted); font-size: 12px; cursor: pointer; text-decoration: underline; margin-top: 4px; }
-    .cart-footer { padding: 22px 28px 28px; border-top: 1px solid var(--border); }
-    .cart-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
-    .cart-total-row span { font-size: 14px; color: var(--mid); }
-    .cart-total-row strong { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 30px; color: var(--dark); }
-    .btn-checkout {
-      width: 100%;
-      background: #25D366;
-      color: #fff; border: none;
-      padding: 17px;
-      border-radius: 40px;
-      font-size: 15px; font-weight: 700;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
-    }
-    .btn-checkout:hover:not(:disabled) { background: #1ebe5a; transform: translateY(-2px); }
-    .btn-checkout:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
-    .cart-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; line-height: 1.5; }
-
-    /* ─── COMO FUNCIONA ─── */
-    #como { background: var(--white); }
-    .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .passo { text-align: center; padding: 36px 24px; border-radius: 20px; background: var(--cream); transition: transform 0.3s; }
-    .passo:hover { transform: translateY(-6px); }
-    .passo-num {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--orange); color: #fff;
-      font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 24px;
-      display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
-    }
-    .passo:nth-child(2) .passo-num { background: var(--pink); }
-    .passo h4 { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; margin-bottom: 8px; }
-    .passo p { font-size: 14px; color: var(--mid); line-height: 1.7; }
-
-    /* ─── CTA FAIXA ─── */
-    #cta-final { background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%); text-align: center; }
-    #cta-final .section-title { color: #fff; }
-    #cta-final p { color: rgba(255,255,255,0.9); font-size: 17px; max-width: 540px; margin: 14px auto 32px; }
-    .btn-white {
-      background: #fff; color: var(--pink);
-      padding: 16px 38px; border-radius: 40px;
-      font-size: 15px; font-weight: 700; text-decoration: none;
-      display: inline-flex; align-items: center; gap: 10px;
-      transition: all 0.2s;
-    }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
-
-    /* ─── FOOTER ─── */
-    footer { background: var(--dark); padding: 56px 5% 36px; color: rgba(255,255,255,0.5); }
-    .footer-inner { max-width: 1200px; margin: 0 auto; }
-    .footer-top {
-      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 36px;
-      padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 26px;
-    }
-    .footer-logo { height: 54px; margin-bottom: 4px; }
-    .footer-brand p { font-size: 13px; line-height: 1.7; max-width: 280px; margin-top: 12px; }
-    .footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 14px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-    .footer-col a { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--orange); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 12px; }
-
-    /* ─── WHATSAPP FLOAT ─── */
-    .wa-float {
-      position: fixed;
-      bottom: 28px; left: 28px;
-      z-index: 95;
-      width: 60px; height: 60px;
-      border-radius: 50%;
-      background: #25D366;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.4);
       text-decoration: none;
-      transition: transform 0.2s;
-      animation: wa-pulse 2.4s infinite;
+      font-size: 14px;
+      transition: all 0.2s;
     }
-    .wa-float:hover { transform: scale(1.08); }
-    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
-    @keyframes wa-pulse {
-      0% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.4); }
-      70% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 16px rgba(37,211,102,0); }
-      100% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
-    }
+    .social-link:hover { border-color: var(--pink); color: var(--pink); }
 
-    /* ─── CHATBOT ─── */
-    .bot-toggle {
-      position: fixed;
-      bottom: 100px; left: 28px;
-      z-index: 95;
-      width: 60px; height: 60px;
-      border-radius: 50%;
-      background: var(--pink);
-      border: none;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 8px 24px rgba(196,48,106,0.4);
-      cursor: pointer;
-      font-size: 28px;
-      transition: transform 0.2s;
+    /* ─── ANIMATIONS ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .bot-toggle:hover { transform: scale(1.08); }
-    .bot-panel {
-      position: fixed;
-      bottom: 100px; left: 28px;
-      z-index: 96;
-      width: 360px; max-width: calc(100vw - 40px);
-      background: var(--white);
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.22);
-      overflow: hidden;
-      display: flex; flex-direction: column;
-      max-height: 520px;
-      opacity: 0; transform: translateY(20px) scale(0.96); pointer-events: none;
-      transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .bot-panel.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
-    .bot-header {
-      background: linear-gradient(135deg, var(--orange), var(--pink));
-      color: #fff; padding: 20px 22px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .bot-avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 22px; }
-    .bot-header strong { display: block; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; }
-    .bot-header span { font-size: 12px; opacity: 0.9; }
-    .bot-close { margin-left: auto; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; opacity: 0.85; }
-    .bot-body { flex: 1; overflow-y: auto; padding: 18px; background: var(--cream); }
-    .bot-msg { max-width: 84%; padding: 11px 15px; border-radius: 14px; font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
-    .bot-msg.bot { background: var(--white); color: var(--dark); border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    .bot-msg.user { background: var(--orange); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
-    .bot-options { display: flex; flex-direction: column; gap: 8px; padding: 14px 18px; border-top: 1px solid var(--border); background: var(--white); }
-    .bot-options p { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
-    .bot-opt {
-      text-align: left;
-      background: var(--orange-pale);
-      border: 1px solid transparent;
-      color: var(--dark);
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 13px; font-weight: 500;
-      cursor: pointer;
-      transition: all 0.18s;
-      font-family: 'Inter', sans-serif;
-    }
-    .bot-opt:hover { border-color: var(--orange); background: var(--white); }
-    .bot-opt.wa { background: #25D366; color: #fff; text-align: center; font-weight: 600; }
-
-    /* ─── ANIM ─── */
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s, transform 0.7s; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
 
     /* ─── MOBILE ─── */
     @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 50px; }
-      .hero-art { max-width: 380px; }
-      .produtos-grid { grid-template-columns: 1fr; }
-      .passos { grid-template-columns: 1fr; }
+      .hero-inner { grid-template-columns: 1fr; gap: 60px; }
+      .hero-image { max-width: 440px; }
+      .problema-grid { grid-template-columns: 1fr; }
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .processo-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .processo-steps::before { display: none; }
+      .setores-grid { grid-template-columns: repeat(3, 1fr); }
+      .sobre-grid { grid-template-columns: 1fr; }
+      .sobre-image { max-width: 400px; }
+      .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .nav-links.open {
-        display: flex; flex-direction: column;
-        position: absolute; top: 72px; left: 0; right: 0;
-        background: var(--white); padding: 24px 5%; gap: 18px;
-        box-shadow: 0 8px 30px rgba(0,0,0,0.1); align-items: flex-start;
-      }
       .hamburger { display: flex; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .wa-float, .bot-toggle { bottom: 20px; }
-      .bot-toggle { bottom: 90px; }
-      .bot-panel { bottom: 90px; left: 12px; }
-      .cart-fab { bottom: 20px; right: 16px; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; left: 0; right: 0;
+        background: var(--white);
+        padding: 24px 5%;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        gap: 20px;
+      }
+      .nav-cta { width: fit-content; }
+      .hero-image { display: none; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .setores-grid { grid-template-columns: repeat(2, 1fr); }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .stat { border-right: none; }
+      .servicos-header { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -660,100 +834,451 @@
   <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">
-      <img src="creative-logo.png" alt="BDM Creative" />
+      <img src="logo.png" alt="BDM Bianca Digital Marketing" />
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#loja">Loja</a></li>
-      <li><a href="#como">Como Funciona</a></li>
-      <li><a href="../index.html" class="nav-back">← Bianca Digital Marketing</a></li>
-      <li><a href="#loja" class="nav-cta">Encomendar</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#processo">Como Trabalhamos</a></li>
+      <li><a href="#sobre">A Bianca</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+      <li><a href="bdmcreative/" class="nav-creative">BDM Creative ♥</a></li>
+      <li><a href="#contacto" class="nav-cta">Falar Connosco</a></li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-blob b1"></div>
-    <div class="hero-blob b2"></div>
     <div class="hero-inner">
-      <div>
-        <span class="hero-tag fade-up">♥ Papelaria personalizada para empresas</span>
+      <div class="hero-content">
+        <div class="hero-tag fade-up">V.N. Gaia · Porto · Portugal</div>
         <h1 class="hero-title fade-up delay-1">
-          Detalhes que<br/>
-          <em>encantam</em> a tua<br/>
-          <span>marca.</span>
+          Não somos<br/>
+          uma agência.<br/>
+          <em>Somos quem define<br/>quem cresce.</em>
         </h1>
         <p class="hero-sub fade-up delay-2">
-          Cartões, convites, etiquetas e brindes criados à medida do teu negócio.
-          Escolhe o produto e a quantidade, vê o preço na hora e finaliza no WhatsApp.
+          Sem tempo para redes? O teu negócio está invisível.<br/>
+          A BDM cuida da tua presença digital, da estratégia ao conteúdo,
+          para que sejas reconhecido em Gaia e no Porto.
         </p>
         <div class="hero-actions fade-up delay-3">
-          <a href="#loja" class="btn-primary">Ver Produtos</a>
-          <a href="#como" class="btn-outline">Como Funciona</a>
+          <a href="#contacto" class="btn-primary">Quero Crescer</a>
+          <a href="#servicos" class="btn-outline">Ver Serviços</a>
         </div>
       </div>
-      <div class="hero-art fade-up delay-2">
-        <img src="img/hero-dog.jpg" alt="BDM Creative" class="hero-photo" />
+      <div class="hero-image fade-up delay-2">
+        <div class="hero-dot"></div>
+        <div class="hero-image-wrap">
+          <img src="bianca.jpg" alt="Bianca Pedrozo BDM" />
+        </div>
+        <div class="hero-image-badge">
+          <strong>100+</strong>
+          <span>Negócios Transformados</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>Cartões Dobráveis</span><span>Convites</span><span>Etiquetas</span><span>Brindes</span><span>Embalagens</span><span>Marcadores</span>
-      <span>Cartões Dobráveis</span><span>Convites</span><span>Etiquetas</span><span>Brindes</span><span>Embalagens</span><span>Marcadores</span>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat fade-up">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Anos de Experiência</span>
+      </div>
+      <div class="stat fade-up delay-1">
+        <span class="stat-num">100+</span>
+        <span class="stat-label">Clientes Satisfeitos</span>
+      </div>
+      <div class="stat fade-up delay-2">
+        <span class="stat-num">7</span>
+        <span class="stat-label">Serviços Internos</span>
+      </div>
+      <div class="stat fade-up delay-3">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Dedicação ao Resultado</span>
+      </div>
     </div>
   </div>
 
-  <!-- LOJA -->
-  <section id="loja">
+  <!-- PROBLEMA -->
+  <section id="problema">
     <div class="section-inner">
-      <div class="section-head fade-up">
-        <div class="section-tag">A Loja</div>
-        <h2 class="section-title">Escolhe, <em>calcula</em> e encomenda.</h2>
-        <p class="section-sub">Clica numa quantidade para veres o preço. Junta os produtos que quiseres ao carrinho e finaliza diretamente no nosso WhatsApp.</p>
+      <div class="problema-grid">
+        <div>
+          <div class="section-tag fade-up">O Problema</div>
+          <h2 class="section-title fade-up delay-1">
+            O teu negócio merece<br/>
+            mais do que <em>posts</em>.
+          </h2>
+          <p class="section-sub fade-up delay-2" style="margin-bottom:40px;">
+            O mercado de Gaia e Porto está cheio de freelancers operacionais e agências sem visão.
+            A maioria limita-se a publicar conteúdo. Isso não chega.
+          </p>
+          <div class="problema-cards">
+            <div class="problema-card fade-up delay-1">
+              <div class="problema-card-icon">⏱</div>
+              <div class="problema-card-text">
+                <strong>Sem Tempo para Redes Sociais</strong>
+                <p>Gerires o teu negócio e ainda criares conteúdo é impossível. Focas-te no que sabes.</p>
+              </div>
+            </div>
+            <div class="problema-card fade-up delay-2">
+              <div class="problema-card-icon">📉</div>
+              <div class="problema-card-text">
+                <strong>Inconsistência Digital</strong>
+                <p>Publicações irregulares destroem a confiança e afastam potenciais clientes.</p>
+              </div>
+            </div>
+            <div class="problema-card fade-up delay-3">
+              <div class="problema-card-icon">🎯</div>
+              <div class="problema-card-text">
+                <strong>Sem Posicionamento Claro</strong>
+                <p>Se não te comunicares bem, não te diferencias. E quem não se diferencia, desaparece.</p>
+              </div>
+            </div>
+            <div class="problema-card fade-up delay-4">
+              <div class="problema-card-icon">😟</div>
+              <div class="problema-card-text">
+                <strong>Medo de Parecer Amador</strong>
+                <p>Insegurança digital é real. A BDM organiza, profissionaliza e eleva a perceção da tua marca.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up delay-2">
+          <div class="problema-quote">
+            <blockquote>
+              "Não é sobre posts.<br/>
+              É sobre posicionamento.<br/>
+              É sobre seres lembrado."
+            </blockquote>
+            <cite>Bianca Pedrozo, Fundadora BDM</cite>
+          </div>
+        </div>
       </div>
-      <div id="produtosGrid"><!-- preenchido por JS --></div>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section id="como">
+  <!-- SERVIÇOS -->
+  <section id="servicos">
     <div class="section-inner">
-      <div class="section-head fade-up">
-        <div class="section-tag">Simples e rápido</div>
-        <h2 class="section-title">Da escolha à <em>encomenda</em> em 3 passos.</h2>
+      <div class="servicos-header">
+        <div>
+          <div class="section-tag fade-up">O Que Fazemos</div>
+          <h2 class="section-title fade-up delay-1">
+            Tudo feito internamente.<br/>
+            <em>Nada subcontratado.</em>
+          </h2>
+        </div>
+        <p class="section-sub fade-up delay-2">
+          Não sentes que contrataste um fornecedor.
+          Sentes que ganhaste uma equipa estratégica completa.
+        </p>
       </div>
-      <div class="passos">
-        <div class="passo fade-up">
-          <div class="passo-num">1</div>
-          <h4>Escolhe</h4>
-          <p>Seleciona o produto e a quantidade que precisas. O preço aparece na hora.</p>
+      <div class="servicos-grid">
+        <div class="servico-card fade-up">
+          <div class="servico-num">01</div>
+          <div class="servico-icon">🎯</div>
+          <h3>Estratégia Digital</h3>
+          <p>Definimos o posicionamento, a voz da marca e o plano de crescimento. Antes de publicar, pensamos.</p>
         </div>
-        <div class="passo fade-up delay-1">
-          <div class="passo-num">2</div>
-          <h4>Adiciona</h4>
-          <p>Junta tudo ao carrinho. Podes misturar vários produtos e quantidades.</p>
+        <div class="servico-card fade-up delay-1">
+          <div class="servico-num">02</div>
+          <div class="servico-icon">✏️</div>
+          <h3>Design & Identidade</h3>
+          <p>Criamos visual premium e consistente que transmite profissionalismo e diferencia a tua marca.</p>
         </div>
-        <div class="passo fade-up delay-2">
-          <div class="passo-num">3</div>
-          <h4>Finaliza</h4>
-          <p>Carrega em finalizar e a tua encomenda chega ao nosso WhatsApp pronta a confirmar.</p>
+        <div class="servico-card featured fade-up delay-2">
+          <div class="servico-num">03</div>
+          <div class="servico-icon">📸</div>
+          <h3>Captação de Conteúdo</h3>
+          <p>Fotografia e vídeo profissional para redes sociais. Reels, stories e posts que prendem a atenção.</p>
+        </div>
+        <div class="servico-card fade-up delay-1">
+          <div class="servico-num">04</div>
+          <div class="servico-icon">✍️</div>
+          <h3>Criação de Conteúdo</h3>
+          <p>Legendas estratégicas, carrosséis, guiões e copy que converte. Cada palavra tem propósito.</p>
+        </div>
+        <div class="servico-card fade-up delay-2">
+          <div class="servico-num">05</div>
+          <div class="servico-icon">🎬</div>
+          <h3>Edição de Vídeo</h3>
+          <p>Reels e vídeos editados com ritmo, música e estética da tua marca. Conteúdo que para o scroll.</p>
+        </div>
+        <div class="servico-card fade-up delay-3">
+          <div class="servico-num">06</div>
+          <div class="servico-icon">📊</div>
+          <h3>Gestão & Análise</h3>
+          <p>Publicação, monitorização, interação e relatórios mensais. Tomamos decisões com dados.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
-  <section id="cta-final">
-    <div class="section-inner fade-up">
-      <h2 class="section-title">Tens um projeto especial?</h2>
-      <p>Personalizações, orçamentos à medida ou dúvidas sobre acabamentos? Fala connosco diretamente.</p>
-      <a class="btn-white" id="ctaWhats" href="#">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.027z"/></svg>
-        Falar no WhatsApp
-      </a>
+  <!-- PROCESSO -->
+  <section id="processo">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom:0;">
+        <div class="section-tag fade-up" style="justify-content:center;">Como Trabalhamos</div>
+        <h2 class="section-title fade-up delay-1" style="text-align:center;">
+          Um processo simples.<br/>
+          <em>Resultados consistentes.</em>
+        </h2>
+      </div>
+      <div class="processo-steps">
+        <div class="processo-step fade-up">
+          <div class="step-circle">1</div>
+          <h4>Diagnóstico</h4>
+          <p>Analisamos o teu negócio, mercado local e concorrência para entender onde estás.</p>
+        </div>
+        <div class="processo-step fade-up delay-1">
+          <div class="step-circle">2</div>
+          <h4>Estratégia</h4>
+          <p>Definimos posicionamento, linha editorial e plano de conteúdo personalizado.</p>
+        </div>
+        <div class="processo-step fade-up delay-2">
+          <div class="step-circle">3</div>
+          <h4>Produção</h4>
+          <p>Captamos, criamos e editamos todo o conteúdo. Tu não preocupas com nada.</p>
+        </div>
+        <div class="processo-step fade-up delay-3">
+          <div class="step-circle">4</div>
+          <h4>Crescimento</h4>
+          <p>Publicamos, gerimos e analisamos. Ajustamos mensalmente para crescer sempre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETORES -->
+  <section id="setores">
+    <div class="section-inner">
+      <div style="text-align:center;">
+        <div class="section-tag fade-up" style="justify-content:center;">Setores</div>
+        <h2 class="section-title fade-up delay-1" style="text-align:center;">
+          Conhecemos o teu<br/>
+          <em>mercado local.</em>
+        </h2>
+        <p class="section-sub fade-up delay-2" style="margin:0 auto 0; text-align:center;">
+          Especializados em negócios de Gaia e Porto em setores onde a confiança é tudo.
+        </p>
+      </div>
+      <div class="setores-grid">
+        <div class="setor-card fade-up">
+          <span class="setor-icon">🏠</span>
+          <span>Imobiliário</span>
+        </div>
+        <div class="setor-card fade-up delay-1">
+          <span class="setor-icon">🏥</span>
+          <span>Saúde & Clínicas</span>
+        </div>
+        <div class="setor-card fade-up delay-2">
+          <span class="setor-icon">🍽️</span>
+          <span>Restauração</span>
+        </div>
+        <div class="setor-card fade-up delay-3">
+          <span class="setor-icon">💆</span>
+          <span>Estética & Bem-estar</span>
+        </div>
+        <div class="setor-card fade-up delay-4">
+          <span class="setor-icon">⚙️</span>
+          <span>Serviços Locais</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="section-inner">
+      <div class="sobre-grid">
+        <div class="sobre-image fade-up">
+          <div class="sobre-image-frame"></div>
+          <img src="bianca.jpg" alt="Bianca Pedrozo" />
+        </div>
+        <div class="fade-up delay-2">
+          <div class="section-tag">A Fundadora</div>
+          <h2 class="section-title">
+            Olá, sou a <em>Bianca</em>.<br/>
+            E acredito que negócios locais merecem presença global.
+          </h2>
+          <p class="sobre-text">
+            Sou brasileira, fundei a BDM em V.N. Gaia e acredito que cada negócio local
+            merece uma presença digital que faça jus ao trabalho que há por trás.
+          </p>
+          <p class="sobre-text">
+            A BDM nasceu para ser mais do que uma agência de redes sociais.
+            Somos parceiros de crescimento. Cada cliente é tratado como se fosse o único.
+            Porque quem faz bem merece ser visto.
+          </p>
+          <p class="sobre-text">
+            Tudo feito internamente: estratégia, design, captação, edição e gestão.
+            Sem subcontratações. Sem surpresas. Com resultados.
+          </p>
+          <div class="sobre-valores">
+            <span class="valor-tag">Estratégia</span>
+            <span class="valor-tag">Autenticidade</span>
+            <span class="valor-tag">Comunidade</span>
+            <span class="valor-tag">Resultados</span>
+            <span class="valor-tag">V.N. Gaia</span>
+            <span class="valor-tag">Porto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS / DEPOIMENTOS -->
+  <section id="resultados">
+    <div class="section-inner">
+      <div class="section-tag fade-up">O Que Dizem</div>
+      <h2 class="section-title fade-up delay-1">
+        Negócios que <em>cresceram</em><br/>
+        com a BDM.
+      </h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento-card fade-up">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "A BDM estuda, individualiza e humaniza a tua empresa com exclusividade. Ela entende cada necessidade e vontade do cliente. Confio e indico de olhos fechados."
+          </blockquote>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">R</div>
+            <div class="autor-info">
+              <strong>Ricardo Soares</strong>
+              <span>Clube Judo RS · V.N. Gaia</span>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento-card fade-up delay-1">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "A equipa demonstrou sempre profissionalismo, criatividade e dedicação em todas as fases do projeto. É um prazer contar com o vosso acompanhamento."
+          </blockquote>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">A</div>
+            <div class="autor-info">
+              <strong>Ana Maria</strong>
+              <span>Reiconta · Porto</span>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento-card fade-up delay-2">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "A BDM entende o meu público e comunica com ele da forma certa.
+            Os resultados falam por si."
+          </blockquote>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">L</div>
+            <div class="autor-info">
+              <strong>Dra. Leilane</strong>
+              <span>Instituto Leilane · Laranjeira, Gaia</span>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento-card fade-up">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "Sinto que tenho uma equipa estratégica ao meu lado.
+            Os clientes chegam a dizer que me viram no Instagram."
+          </blockquote>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">I</div>
+            <div class="autor-info">
+              <strong>Iolanda Castro</strong>
+              <span>Consultora Imobiliária Remax · Gaia</span>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento-card fade-up delay-1">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "A minha marca ganhou vida nas redes sociais. A Bianca percebe
+            mesmo o que cada negócio precisa."
+          </blockquote>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">M</div>
+            <div class="autor-info">
+              <strong>Mylla Saldanha</strong>
+              <span>Mylla Saldanha Bistro e Patisserie · Gaia</span>
+            </div>
+          </div>
+        </div>
+        <div class="depoimento-card fade-up delay-2">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "Trabalhar com a BDM mudou a minha presença digital.
+            Mais visibilidade, mais contactos, mais negócio."
+          </blockquote>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">B</div>
+            <div class="autor-info">
+              <strong>Bruno Afonso</strong>
+              <span>Consultor Imobiliário Remax · Porto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / CTA -->
+  <section id="contacto">
+    <div class="cta-inner">
+      <div class="cta-text fade-up">
+        <div class="section-tag">Vamos Começar</div>
+        <h2 class="cta-title">
+          Pronto para seres<br/>
+          reconhecido em Gaia<br/>
+          e no Porto?
+        </h2>
+        <p class="cta-sub">
+          Marca uma reunião gratuita de diagnóstico.<br/>
+          Analisamos a tua presença atual e apresentamos<br/>
+          um plano personalizado, sem compromisso.
+        </p>
+      </div>
+      <div class="fade-up delay-2">
+        <form class="cta-form" onsubmit="handleSubmit(event)">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" placeholder="O teu nome" required />
+            </div>
+            <div class="form-group">
+              <label>Telemóvel</label>
+              <input type="tel" placeholder="+351 9xx xxx xxx" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="email@exemplo.pt" required />
+          </div>
+          <div class="form-group">
+            <label>Setor do Negócio</label>
+            <select required>
+              <option value="" disabled selected>Escolhe o teu setor</option>
+              <option>Imobiliário</option>
+              <option>Saúde & Clínicas</option>
+              <option>Restauração</option>
+              <option>Estética & Bem-estar</option>
+              <option>Serviços Locais</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Conta-nos sobre o teu negócio</label>
+            <textarea placeholder="Descreve o teu negócio e o que pretendes alcançar..."></textarea>
+          </div>
+          <button type="submit" class="btn-form">Quero a Minha Reunião Gratuita →</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -762,73 +1287,123 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="creative-logo.png" alt="BDM Creative" class="footer-logo" />
-          <p>Papelaria personalizada para empresas. Um projeto da Bianca Digital Marketing, em V.N. Gaia.</p>
+          <img src="logo-light.png" alt="BDM" />
+          <p>A agência boutique que define quem cresce no digital em V.N. Gaia e Porto.</p>
         </div>
         <div class="footer-col">
-          <h5>Navegação</h5>
+          <h5>Serviços</h5>
           <ul>
-            <li><a href="#loja">Loja</a></li>
-            <li><a href="#como">Como Funciona</a></li>
-            <li><a href="../index.html">Bianca Digital Marketing</a></li>
+            <li><a href="#servicos">Estratégia Digital</a></li>
+            <li><a href="#servicos">Design & Identidade</a></li>
+            <li><a href="#servicos">Captação de Conteúdo</a></li>
+            <li><a href="#servicos">Gestão de Redes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#sobre">Sobre a Bianca</a></li>
+            <li><a href="#processo">Como Trabalhamos</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="bdmcreative/">BDM Creative · Papelaria</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Contacto</h5>
           <ul>
-            <li><a href="#" id="footerWhats">WhatsApp · +351 913 916 546</a></li>
-            <li><a href="https://www.instagram.com/biancadigitalmarketing/" target="_blank">@biancadigitalmarketing</a></li>
             <li><a href="#">📍 V.N. Gaia, Portugal</a></li>
+            <li><a href="mailto:geral@biancadigitalmarketing.pt">geral@biancadigitalmarketing.pt</a></li>
+            <li><a href="https://www.instagram.com/biancadigitalmarketing/" target="_blank">@biancadigitalmarketing</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 BDM Creative · Bianca Digital Marketing. Todos os direitos reservados.</span>
+        <span>© 2026 BDM Bianca Digital Marketing. Todos os direitos reservados.</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/biancadigitalmarketing/" target="_blank" class="social-link" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- CART FAB -->
-  <button class="cart-fab" id="cartFab" onclick="openCart()">
-    <span class="cart-icon">🛒</span>
-    <span>Carrinho</span>
-    <span class="cart-count" id="cartCount">0</span>
-  </button>
+  <!-- ══════════ WHATSAPP FLUTUANTE + CHATBOT ══════════ -->
+  <style>
+    .wa-float {
+      position: fixed; bottom: 28px; left: 28px; z-index: 95;
+      width: 60px; height: 60px; border-radius: 50%; background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.45); text-decoration: none;
+      transition: transform 0.2s; animation: wa-pulse 2.4s infinite;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+    @keyframes wa-pulse {
+      0% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.4); }
+      70% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 16px rgba(37,211,102,0); }
+      100% { box-shadow: 0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
+    }
+    .bot-toggle {
+      position: fixed; bottom: 100px; left: 28px; z-index: 95;
+      width: 60px; height: 60px; border-radius: 50%; background: var(--pink);
+      border: none; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(196,48,106,0.4); cursor: pointer; font-size: 28px;
+      transition: transform 0.2s;
+    }
+    .bot-toggle:hover { transform: scale(1.08); }
+    .bot-panel {
+      position: fixed; bottom: 100px; left: 28px; z-index: 96;
+      width: 360px; max-width: calc(100vw - 40px); background: var(--white);
+      border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.22); overflow: hidden;
+      display: flex; flex-direction: column; max-height: 520px;
+      opacity: 0; transform: translateY(20px) scale(0.96); pointer-events: none;
+      transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+    }
+    .bot-panel.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .bot-header {
+      background: var(--dark); color: #fff; padding: 20px 22px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .bot-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .bot-header strong { display: block; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 18px; }
+    .bot-header span { font-size: 12px; opacity: 0.8; }
+    .bot-close { margin-left: auto; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; opacity: 0.85; }
+    .bot-body { flex: 1; overflow-y: auto; padding: 18px; background: var(--cream); }
+    .bot-msg { max-width: 84%; padding: 11px 15px; border-radius: 14px; font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
+    .bot-msg.bot { background: var(--white); color: var(--dark); border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .bot-msg.user { background: var(--pink); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+    .bot-options { display: flex; flex-direction: column; gap: 8px; padding: 14px 18px; border-top: 1px solid var(--border); background: var(--white); }
+    .bot-options p { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+    .bot-opt {
+      text-align: left; background: var(--pink-pale); border: 1px solid transparent; color: var(--dark);
+      padding: 10px 14px; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer;
+      transition: all 0.18s; font-family: 'Inter', sans-serif;
+    }
+    .bot-opt:hover { border-color: var(--pink); background: var(--white); }
+    .bot-opt.wa { background: #25D366; color: #fff; text-align: center; font-weight: 600; }
+    @media (max-width: 768px) {
+      .wa-float { bottom: 20px; }
+      .bot-toggle { bottom: 90px; }
+      .bot-panel { bottom: 90px; left: 12px; }
+    }
+  </style>
 
-  <!-- CART PANEL -->
-  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-  <aside class="cart-panel" id="cartPanel">
-    <div class="cart-header">
-      <h3>O teu carrinho</h3>
-      <button class="cart-close" onclick="closeCart()">×</button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-footer">
-      <div class="cart-total-row">
-        <span>Total estimado</span>
-        <strong id="cartTotal">0€</strong>
-      </div>
-      <button class="btn-checkout" id="btnCheckout" onclick="checkout()" disabled>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.027z"/></svg>
-        Finalizar no WhatsApp
-      </button>
-      <p class="cart-note">A encomenda abre no WhatsApp já preenchida. Confirmamos disponibilidade, prazos e pagamento por lá.</p>
-    </div>
-  </aside>
-
-  <!-- WHATSAPP FLOAT -->
-  <a class="wa-float" id="waFloat" href="#" aria-label="WhatsApp">
+  <a class="wa-float" id="waFloat" href="#" target="_blank" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.027zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
-  <!-- CHATBOT -->
   <button class="bot-toggle" id="botToggle" onclick="toggleBot()" aria-label="Ajuda">💬</button>
   <div class="bot-panel" id="botPanel">
     <div class="bot-header">
-      <div class="bot-avatar">🧡</div>
+      <div class="bot-avatar">B</div>
       <div>
-        <strong>Assistente BDM Creative</strong>
-        <span>Responde em segundos</span>
+        <strong>Assistente BDM</strong>
+        <span>Tira as tuas dúvidas</span>
       </div>
       <button class="bot-close" onclick="toggleBot()">×</button>
     </div>
@@ -837,305 +1412,19 @@
   </div>
 
   <script>
-    /* ════════════════════════════════════════════════════════════
-       CONFIGURAÇÃO  — edita aqui o número e os produtos
-       ════════════════════════════════════════════════════════════ */
-    const WHATSAPP = "351913916546"; // sem +, sem espaços
-
-    /* PRODUTOS
-       - "Cartões Dobráveis" tem os preços REAIS que enviaste.
-       - Os restantes 3 são EXEMPLOS [EDITAR]: troca nomes, emojis e
-         valores, ou apaga os que não vendes. unit = preço por unidade
-         (apenas informativo); price = preço total daquela quantidade.   */
-    /* COMO EDITAR PREÇOS:
-       - Produto com preços fixos -> usa "tiers" com { qty, unit, price }.
-         (unit = preço por unidade, só informativo; price = total da quantidade)
-       - Produto "sob orçamento" -> mete "quote: true" e em "tiers" só { qty }.
-         Quando tiveres a tabela, tira o "quote: true" e acrescenta unit/price.   */
-    const PRODUTOS = [
-      /* ═══ PAPEL & CARTOLINA ═══ */
-      {
-        categoria: "Papel & Cartolina",
-        id: "cartoes-dobraveis",
-        nome: "Cartões Dobráveis",
-        emoji: "💌",
-        badge: "Mais pedido",
-        desc: "Cartões dobráveis personalizados com a tua marca.",
-        tiers: [
-          { qty: 30,  unit: 1.17, price: 35  },
-          { qty: 50,  unit: 0.90, price: 45  },
-          { qty: 100, unit: 0.55, price: 55  },
-          { qty: 200, unit: 0.46, price: 92  },
-          { qty: 300, unit: 0.43, price: 130 },
-          { qty: 500, unit: 0.39, price: 195 }
-        ]
-      },
-      {
-        categoria: "Papel & Cartolina",
-        id: "cartoes-tradicionais",
-        nome: "Cartões Tradicionais",
-        emoji: "🪪",
-        desc: "Cartões de visita e mensagem em cartolina, com a tua identidade.",
-        quote: true,
-        tiers: [ {qty:30},{qty:50},{qty:100},{qty:200},{qty:300},{qty:500} ]
-      },
-      {
-        categoria: "Papel & Cartolina",
-        id: "tags-sacolas",
-        nome: "Tags para Sacolas",
-        emoji: "🛍️",
-        desc: "Etiquetas pendentes para sacolas e embrulhos da tua loja.",
-        quote: true,
-        tiers: [ {qty:50},{qty:100},{qty:200},{qty:500} ]
-      },
-      {
-        categoria: "Papel & Cartolina",
-        id: "tags-embalagens",
-        nome: "Tags para Embalagens",
-        emoji: "🎀",
-        desc: "Tags personalizadas para embalagens e produtos.",
-        quote: true,
-        tiers: [ {qty:50},{qty:100},{qty:200},{qty:500} ]
-      },
-      {
-        categoria: "Papel & Cartolina",
-        id: "marcadores-livro",
-        nome: "Marcadores de Livro com Íman",
-        emoji: "🔖",
-        desc: "Marcadores personalizados com íman — brinde memorável.",
-        quote: true,
-        tiers: [ {qty:10},{qty:25},{qty:50},{qty:100} ]
-      },
-      {
-        categoria: "Papel & Cartolina",
-        id: "convites",
-        nome: "Convites Personalizados",
-        emoji: "✉️",
-        desc: "Convites à medida para eventos e empresas.",
-        quote: true,
-        tiers: [ {qty:25},{qty:50},{qty:100},{qty:200} ]
-      },
-
-      /* ═══ VINIL & PERSONALIZADOS ═══ */
-      {
-        categoria: "Vinil & Personalizados",
-        id: "rotulos",
-        nome: "Rótulos & Etiquetas",
-        emoji: "🫙",
-        desc: "Rótulos em vinil para frascos, velas, embalagens e produtos.",
-        quote: true,
-        tiers: [ {qty:50},{qty:100},{qty:250},{qty:500} ]
-      },
-      {
-        categoria: "Vinil & Personalizados",
-        id: "copos-canecas",
-        nome: "Copos & Canecas",
-        emoji: "☕",
-        desc: "Copos e canecas personalizados com vinil.",
-        quote: true,
-        tiers: [ {qty:10},{qty:25},{qty:50},{qty:100} ]
-      },
-      {
-        categoria: "Vinil & Personalizados",
-        id: "necessaire",
-        nome: "Necessaire Personalizada",
-        emoji: "👜",
-        desc: "Necessaires personalizadas com a tua marca em vinil.",
-        quote: true,
-        tiers: [ {qty:5},{qty:10},{qty:25},{qty:50} ]
-      },
-      {
-        categoria: "Vinil & Personalizados",
-        id: "ecobag",
-        nome: "Ecobag Personalizada",
-        emoji: "🌿",
-        desc: "Sacos de pano (ecobag) personalizados — sustentável e útil.",
-        quote: true,
-        tiers: [ {qty:10},{qty:25},{qty:50},{qty:100} ]
-      }
-    ];
-
-    /* ════════════════════════════════════════════════════════════ */
-
-    const selecionado = {}; // id -> tier escolhido
-    let carrinho = [];
-
-    const eur = n => (Number.isInteger(n) ? n + "€" : n.toFixed(2).replace(".", ",") + "€");
-
-    // ─── Render produtos (agrupado por categoria) ───
-    // 3 fotos por produto: bdmcreative/img/<id>-1.jpg, -2.jpg, -3.jpg
-    // Enquanto não existem, aparece um placeholder bonito automaticamente.
-    function carouselHTML(p) {
-      const slides = [1, 2, 3].map(n => `
-        <div class="slide">
-          <div class="ph">
-            <span class="ph-emoji">${p.emoji}</span>
-            <span class="ph-name">${p.nome}</span>
-            <span class="ph-tip">Foto ${n}</span>
-          </div>
-          <img src="img/${p.id}-${n}.jpg" alt="${p.nome} ${n}" loading="lazy" onerror="this.remove()" />
-        </div>`).join("");
-      const dots = [0, 1, 2].map(n => `<button class="${n === 0 ? 'active' : ''}" onclick="carGo('${p.id}', ${n})" aria-label="Foto ${n + 1}"></button>`).join("");
-      return `
-        <div class="carousel" id="car-${p.id}">
-          <div class="car-track" id="track-${p.id}">${slides}</div>
-          <button class="car-arrow prev" onclick="carMove('${p.id}', -1)" aria-label="Anterior">‹</button>
-          <button class="car-arrow next" onclick="carMove('${p.id}', 1)" aria-label="Seguinte">›</button>
-          <div class="car-dots" id="dots-${p.id}">${dots}</div>
-        </div>`;
-    }
-
-    function cardHTML(p) {
-      const badge = p.badge ? p.badge : (p.quote ? "Sob orçamento" : "");
-      return `
-        <div class="produto-card fade-up">
-          ${carouselHTML(p)}
-          ${badge ? `<span class="badge-overlay ${p.quote ? 'quote' : ''}">${badge}</span>` : ""}
-          <div class="produto-body">
-            <h3>${p.nome}</h3>
-            <p class="produto-desc">${p.desc}</p>
-            <div class="qty-label">Escolhe a quantidade</div>
-            <div class="qty-options" id="qty-${p.id}">
-              ${p.tiers.map(t => `<button class="qty-btn" onclick="selecionar('${p.id}', ${t.qty})">${t.qty}</button>`).join("")}
-            </div>
-            <div class="price-box" id="price-${p.id}">
-              <span class="price-empty">${p.quote ? "Escolhe a quantidade e pede o orçamento." : "Seleciona uma quantidade para ver o preço."}</span>
-            </div>
-            <button class="btn-add" id="add-${p.id}" disabled onclick="adicionar('${p.id}')">${p.quote ? "Adicionar e pedir orçamento" : "Adicionar ao carrinho"}</button>
-          </div>
-        </div>`;
-    }
-
-    function renderProdutos() {
-      const wrap = document.getElementById("produtosGrid");
-      const cats = [...new Set(PRODUTOS.map(p => p.categoria))];
-      wrap.innerHTML = cats.map(cat => `
-        <h3 class="cat-head fade-up">${cat}</h3>
-        <div class="produtos-grid">
-          ${PRODUTOS.filter(p => p.categoria === cat).map(cardHTML).join("")}
-        </div>
-      `).join("");
-      observarFade();
-    }
-
-    // ─── Carrossel ───
-    const carPos = {}; // id -> índice atual (0..2)
-    function carGo(id, idx) {
-      idx = (idx + 3) % 3;
-      carPos[id] = idx;
-      const track = document.getElementById(`track-${id}`);
-      if (track) track.style.transform = `translateX(-${idx * 100}%)`;
-      document.querySelectorAll(`#dots-${id} button`).forEach((b, n) => b.classList.toggle("active", n === idx));
-    }
-    function carMove(id, dir) { carGo(id, (carPos[id] || 0) + dir); }
-
-    function selecionar(prodId, qty) {
-      const prod = PRODUTOS.find(p => p.id === prodId);
-      const tier = prod.tiers.find(t => t.qty === qty);
-      selecionado[prodId] = tier;
-
-      document.querySelectorAll(`#qty-${prodId} .qty-btn`).forEach(b => {
-        b.classList.toggle("active", parseInt(b.textContent) === qty);
-      });
-
-      const box = document.getElementById(`price-${prodId}`);
-      if (prod.quote) {
-        box.innerHTML = `
-          <div class="price-info">
-            <div class="unit">${tier.qty} unidades</div>
-            <div class="unit">Valor confirmado no WhatsApp</div>
-          </div>
-          <div class="total quote-total">Sob<br/>orçamento</div>`;
-      } else {
-        box.innerHTML = `
-          <div class="price-info">
-            <div class="unit">${tier.qty} unidades</div>
-            <div class="unit">≈ <b>${eur(tier.unit)}</b> / unidade</div>
-          </div>
-          <div class="total">${eur(tier.price)}</div>`;
-      }
-      document.getElementById(`add-${prodId}`).disabled = false;
-    }
-
-    function adicionar(prodId) {
-      const prod = PRODUTOS.find(p => p.id === prodId);
-      const tier = selecionado[prodId];
-      if (!tier) return;
-      carrinho.push({ id: prodId, nome: prod.nome, emoji: prod.emoji, qty: tier.qty, price: prod.quote ? null : tier.price });
-      renderCarrinho();
-      openCart();
-    }
-
-    function removerItem(idx) {
-      carrinho.splice(idx, 1);
-      renderCarrinho();
-    }
-
-    function totalCarrinho() {
-      return carrinho.reduce((s, i) => s + (i.price || 0), 0);
-    }
-
-    function renderCarrinho() {
-      const wrap = document.getElementById("cartItems");
-      const known = totalCarrinho();
-      const hasQuote = carrinho.some(i => i.price === null);
-      document.getElementById("cartCount").textContent = carrinho.length;
-      document.getElementById("cartTotal").textContent =
-        carrinho.length === 0 ? "0€" : (known > 0 ? eur(known) + (hasQuote ? " +" : "") : "Sob orçamento");
-      document.getElementById("btnCheckout").disabled = carrinho.length === 0;
-
-      if (carrinho.length === 0) {
-        wrap.innerHTML = `<div class="cart-empty"><div class="big">🛒</div>O teu carrinho está vazio.<br/>Escolhe um produto na loja.</div>`;
-        return;
-      }
-      wrap.innerHTML = carrinho.map((i, idx) => `
-        <div class="cart-item">
-          <div class="cart-item-emoji">${i.emoji}</div>
-          <div class="cart-item-info">
-            <strong>${i.nome}</strong>
-            <span>${i.qty} unidades</span>
-            <br/><button class="cart-item-remove" onclick="removerItem(${idx})">remover</button>
-          </div>
-          <div class="cart-item-right"><span class="ci-price">${i.price === null ? "Sob orçamento" : eur(i.price)}</span></div>
-        </div>
-      `).join("");
-    }
-
-    function openCart() { document.getElementById("cartPanel").classList.add("open"); document.getElementById("cartOverlay").classList.add("open"); }
-    function closeCart() { document.getElementById("cartPanel").classList.remove("open"); document.getElementById("cartOverlay").classList.remove("open"); }
-
-    function checkout() {
-      if (carrinho.length === 0) return;
-      const known = totalCarrinho();
-      const hasQuote = carrinho.some(i => i.price === null);
-      let msg = "Olá BDM Creative! 🧡 Gostaria de encomendar:\n\n";
-      carrinho.forEach(i => {
-        msg += `• ${i.nome} — ${i.qty} un — ${i.price === null ? "(sob orçamento)" : eur(i.price)}\n`;
-      });
-      if (known > 0) {
-        msg += `\nSubtotal (itens com preço): ${eur(known)}`;
-        if (hasQuote) msg += `\nOs restantes itens são orçamentados por aqui.`;
-      } else {
-        msg += `\nPedido de orçamento.`;
-      }
-      msg += `\n\nFico a aguardar a confirmação. Obrigada!`;
-      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
-    }
-
-    // ─── WhatsApp links (float + CTA + footer) ───
+    /* CONFIGURAÇÃO */
+    const WHATSAPP = "351913916546";
     const waBase = txt => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`;
-    document.getElementById("waFloat").href = waBase("Olá BDM Creative! 🧡 Tenho uma dúvida sobre papelaria personalizada.");
-    document.getElementById("ctaWhats").href = waBase("Olá BDM Creative! Gostaria de falar sobre um projeto personalizado.");
-    document.getElementById("footerWhats").href = waBase("Olá BDM Creative! 🧡");
+    document.getElementById("waFloat").href = waBase("Olá BDM! Gostaria de saber mais sobre os vossos serviços de marketing digital.");
 
-    // ─── Chatbot FAQ ───
+    /* CHATBOT MARKETING */
     const FAQ = [
-      { p: "Quais produtos vendem?", r: "Fazemos papelaria personalizada para empresas: cartões, tags, marcadores, convites, rótulos, copos e canecas, necessaires e ecobags. Podes ver tudo na secção Loja. 🧡" },
-      { p: "Como funciona a encomenda?", r: "É simples: escolhes o produto e a quantidade, adicionas ao carrinho e carregas em 'Finalizar no WhatsApp'. Os Cartões Dobráveis têm preço na hora; os restantes são confirmados por orçamento rápido no WhatsApp." },
-      { p: "Os preços incluem personalização?", r: "Sim! Os valores já contemplam a personalização com a tua marca. Acabamentos especiais podem ter custo extra — confirmamos sempre antes." },
-      { p: "Qual é o prazo de entrega?", r: "O prazo depende do produto e da quantidade. Assim que recebemos a tua encomenda no WhatsApp, confirmamos o prazo certinho para o teu caso." },
-      { p: "Fazem quantidades à medida?", r: "Fazemos! Se precisas de uma quantidade que não está na tabela, fala connosco no WhatsApp e preparamos um orçamento à medida." },
-      { p: "Falar com uma pessoa", r: "__WA__" }
+      { p: "Que serviços oferecem?", r: "Fazemos tudo internamente: estratégia digital, design e identidade, captação e criação de conteúdo, edição de vídeo e gestão completa de redes sociais. 🎯" },
+      { p: "Trabalham com que tipo de negócios?", r: "Somos especializados em negócios locais de V.N. Gaia e Porto — imobiliário, saúde e clínicas, restauração, estética e bem-estar e serviços locais." },
+      { p: "Como começa o trabalho convosco?", r: "Começa com uma reunião gratuita de diagnóstico, sem compromisso. Analisamos a tua presença atual e apresentamos um plano personalizado." },
+      { p: "Quanto custa?", r: "Cada negócio é único, por isso os planos são personalizados. Conta-nos o que precisas e preparamos uma proposta à tua medida." },
+      { p: "Também fazem papelaria?", r: "Sim! Temos a BDM Creative, a nossa linha de papelaria personalizada para empresas: cartões, convites, etiquetas e brindes. Vê em 'BDM Creative ♥' no menu. 🧡" },
+      { p: "Falar com a equipa", r: "__WA__" }
     ];
 
     let botStarted = false;
@@ -1145,7 +1434,7 @@
       if (open && !botStarted) { startBot(); botStarted = true; }
     }
     function startBot() {
-      botSay("Olá! 🧡 Sou o assistente da BDM Creative. Em que te posso ajudar?");
+      botSay("Olá! 👋 Sou o assistente da Bianca Digital Marketing. Como te posso ajudar?");
       renderBotOptions();
     }
     function botSay(text, who = "bot") {
@@ -1160,7 +1449,7 @@
       const opts = document.getElementById("botOptions");
       opts.innerHTML = `<p>Perguntas frequentes</p>` + FAQ.map((f, i) =>
         f.r === "__WA__"
-          ? `<a class="bot-opt wa" href="${waBase("Olá BDM Creative! 🧡 Gostaria de falar com a equipa.")}" target="_blank">💬 ${f.p}</a>`
+          ? `<a class="bot-opt wa" href="${waBase("Olá BDM! Gostaria de falar com a equipa.")}" target="_blank">💬 ${f.p}</a>`
           : `<button class="bot-opt" onclick="botAsk(${i})">${f.p}</button>`
       ).join("");
     }
@@ -1169,25 +1458,45 @@
       botSay(f.p, "user");
       setTimeout(() => botSay(f.r), 350);
     }
+  </script>
 
-    // ─── Nav / menu / fade ───
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
-    function toggleMenu() { document.getElementById("navLinks").classList.toggle("open"); }
-    document.querySelectorAll(".nav-links a").forEach(l => l.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open")));
+  <script>
+    // Nav scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
 
-    let fadeObserver;
-    function observarFade() {
-      if (!fadeObserver) {
-        fadeObserver = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); }), { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
-      }
-      document.querySelectorAll(".fade-up:not(.visible)").forEach(el => fadeObserver.observe(el));
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
     }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
 
-    // ─── Init ───
-    renderProdutos();
-    renderCarrinho();
-    observarFade();
+    // Fade-up animation on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.textContent = '✓ Mensagem Enviada! Entraremos em contacto em breve.';
+      btn.style.background = '#1C1A18';
+      btn.style.color = '#fff';
+      btn.disabled = true;
+    }
   </script>
 </body>
 </html>
