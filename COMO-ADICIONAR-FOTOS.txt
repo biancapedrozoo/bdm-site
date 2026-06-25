@@ -1,0 +1,20 @@
+COMO ADICIONAR AS FOTOS DOS PRODUTOS
+====================================
+
+Cada produto mostra um carrossel de 3 fotos. Põe os ficheiros nesta pasta (img/)
+com EXATAMENTE estes nomes (formato .jpg, de preferência quadradas ~1000x1000):
+
+Cartões Dobráveis ........ cartoes-dobraveis-1.jpg  cartoes-dobraveis-2.jpg  cartoes-dobraveis-3.jpg
+Cartões Tradicionais ..... cartoes-tradicionais-1.jpg  cartoes-tradicionais-2.jpg  cartoes-tradicionais-3.jpg
+Tags para Sacolas ........ tags-sacolas-1.jpg  tags-sacolas-2.jpg  tags-sacolas-3.jpg
+Tags para Embalagens ..... tags-embalagens-1.jpg  tags-embalagens-2.jpg  tags-embalagens-3.jpg
+Marcadores de Livro ...... marcadores-livro-1.jpg  marcadores-livro-2.jpg  marcadores-livro-3.jpg
+Convites ................. convites-1.jpg  convites-2.jpg  convites-3.jpg
+Rótulos & Etiquetas ...... rotulos-1.jpg  rotulos-2.jpg  rotulos-3.jpg
+Copos & Canecas .......... copos-canecas-1.jpg  copos-canecas-2.jpg  copos-canecas-3.jpg
+Necessaire ............... necessaire-1.jpg  necessaire-2.jpg  necessaire-3.jpg
+Ecobag ................... ecobag-1.jpg  ecobag-2.jpg  ecobag-3.jpg
+
+Enquanto um ficheiro não existir, aparece um placeholder com o emoji e o nome
+do produto — por isso o site funciona na mesma. Vais substituindo à medida que
+tiveres as fotos.
